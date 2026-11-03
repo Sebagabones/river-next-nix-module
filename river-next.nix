@@ -19,7 +19,7 @@
   wayland-scanner,
   wlroots_0_20,
   xwayland,
-  _0_16,
+  zig_0_16,
   withManpages ? true,
   xwaylandSupport ? true,
 }:
