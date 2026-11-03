@@ -19,7 +19,7 @@
   wayland-scanner,
   wlroots_0_20,
   xwayland,
-  zig,
+  _0_16,
   withManpages ? true,
   xwaylandSupport ? true,
 }:
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     wayland-scanner
     xwayland
-    zig
+    zig_0_16
   ]
   ++ lib.optional withManpages scdoc;
 
@@ -58,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional xwaylandSupport libx11;
 
-  zigBuildFlags = [
+  BuildFlags = [
     "--system"
     "${finalAttrs.deps}"
   ]
